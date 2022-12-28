@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Home</title>
+<link rel="stylesheet" type="text/css" media="all" href="CSS/home.css" />
+<script src="utils.js" charset="utf-8" defer></script>
+<script src="projectImageJS.js" charset="utf-8" defer></script>
+<script src="sort.js" charset="utf-8" defer></script>
+</head>
+<body>
+	<div align="right">
+		<a href="Logout">Logout</a>
+	</div>
+	
+	<div class="WelcomeMessage" align="center">
+	<h1>Welcome to PhotoImage, here you can look at the albums present on the web application.</h1>
+	<h2>Nice to see you again <span id="id_username"></span></h2>
+	</div>
+	<div id="id_alert" class="alertmessage" align="center"></div>	
+	
+	
+	<div  class="albums">
+	<div class="albumOwned">
+	<h3> Those are the albums owned by you</h3>
+	<div class="row" align="center">
+			<table id="listContainerAlbumUser" class="table"  >
+			<thead>
+				<tr>
+					<th>Title</th>
+					<th>Creator</th>
+					<th>Date</th>
+					<th>Link</th>
+				</tr>
+			</thead>
+			<tbody id="listContainerBodyAlbumUser">
+			</tbody>
+		</table>
+				
+</div>
+</div>
+
+<div class="albumUsers">
+<h3> Those are the albums of the other users</h3>
+<div class="row" align="center">
+		<table id="listContainerALbumOtherUsers" class="table"  >
+			<thead>
+				<tr>
+					<th>Title</th>
+					<th>Creator</th>
+					<th>Date</th>
+					<th>Link</th>
+				</tr>
+			</thead>
+			<tbody id="listContainerBodyAlbumOtherUsers">
+			</tbody>
+		</table>
+		 </div>
+		 </div>
+	</div>
+	
+
+		
+		<div class="form" align="center">
+			<p>Complete the form to create an album</p>
+		<form action="#" id="createAlbum">
+			<fieldset>
+				<p>
+					Name Of The Album: <input id="titleAlbumNew" type="text" name="title" required />
+				</p>
+				<p>
+					<table class="imageNewAlbum" id="listImagesContainer">
+			<thead>
+				<tr>
+					<th>	Title						</th>
+					<th>	Text Description			</th>
+					<th> Thumbnail</th>
+					<th>AddImage </th>
+				</tr>
+			</thead>
+			<tbody id="listContainersImagesBody">
+			</tbody>
+		</table>
+			    <input type="button" value="Create Album" name="submit" class="submit">
+			</fieldset>
+		</form>
+		</div>
+		
+		
+	<div>
+		<div align="right"><input type="button" class="hide" value="Hide Album" id="hideAlbum" ></div>
+			<table class="albumInfoShowed" id="albumInfoShowed" align="center">
+				<thead>
+					<tr class="album" align="center">
+						<th class="rowAlbum" ><h3>Title</h3></th>
+						<th class="rowAlbum"><h3>Creator</h3></th>
+						<th class="rowAlbum"><h3>Date</h3></th>
+					</tr>
+				</thead>
+				<tbody  >
+				<tr>
+				<td id="albumInfoFirstRow" ></td>
+				<td id="albumInfoSecondRow"></td>
+				<td id="albumInfoThirdRow"></td>
+				</tbody>
+			</table>
+
+
+		<div class="showImageContainer" align="center">
+			<table id="albumShowImage" class="showImage" >
+					<thead>
+						<tr>
+							<th  class="showImage">Title</th>
+							<th  class="showImage">Text Description</th>
+							<th  class="showImage">Image</th>
+						</tr>
+					</thead>
+					<tbody id="showImages">
+					
+					</tbody>
+					
+				</table>
+				<div class="page">
+						<input type="button" name="next" value="Next" id="next">	
+						<input type="button" value="Prev" name="prev" id="prev">						
+				</div>
+			</div>
+	   </div>
+	
+	
+	<div class="showCompelete">
+		<div align="right"><input type="button" class="hide" value="Hide Image" id="hideImage" ></div>
+		<table id="showCompleteImageContainer" class="showCompleteImageInfoContainer" align="center">
+						<thead>
+						<tr>
+							<th class="rowAlbum"><h4>Title</h4></th>
+							<th class="rowAlbum"><h4>Text Description</h4></th>
+							</tr>
+						</thead>
+						<tbody id="showCompleteImageContainerBody">	
+						</tbody >
+					</table>
+					
+		<div align="center" class="containerImageComplete">
+			<img id="img" class="imageComplete" >
+		</div>
+		
+		<table id="showComments" class="showComments" align="center" >
+				<thead>
+					<tr><th  class="showImage">Name</th>
+						<th  class="showImage">Comment</th>	 
+				</tr>
+				</thead>
+				<tbody id="showComment">
+				</tbody>
+						
+			</table>
+	</div>
+		
+	<div id="divNoComments" align="center">
+		<h3 id="noComments"></h3>
+	</div>
+	
+	<div align="center" class="form" id="containerForm">
+		<div class="textForm"><h3>Complete the form to add a comment</h3></div>
+		<form action="#" id="commentForm">
+			<fieldset>
+				
+					Comment: <div class="textComment"><textarea rows = "4" cols = "40" id="textArea" required>
+					Enter the comment here
+	        </textarea>
+	        </div>
+				 <input type="button" value="Add a comment" name="submit" class="submit">
+			</fieldset>
+			<div id="alertComment" class="alertmessage"></div>	
+		</form>
+	</div>
+
+	
+</body>
+</html>

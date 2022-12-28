@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Welcome Page</title>
+<link rel="stylesheet" type="text/css" media="all" href="CSS/login.css" />
+<script src="utils.js" charset="utf-8" defer></script>
+<script src="loginManagement.js" charset="utf-8" defer></script>
+
+</head>
+<body>
+
+<div align="center"><h1> Welcome to TIW-ImageProjectRIA, here you can login or signUp </h1></div>
+<div class="signIn" align="center" >
+
+	<h2>This is the sign-in</h2>
+	
+	<form action="#" class="formLogin">
+	<fieldset class="fieldSet">
+		Username:<div class="row"> <input type="text" name="username" required> <br></div>
+		Password:<div class="row"> <input type="password" name="pwd" required><br></div>
+		<input id="loginbutton" type="button" value="login">
+		<p id="errormessageLogin" class="alert"></p>
+		</fieldset>
+	</form>
+	
+	</div>
+	
+	
+	<div class="signUp" align="center" >
+	
+	<h2>This is the form for the sign-Up</h2>
+	
+	<form action="#" class="formSignUp">
+	<fieldset class="fieldSet">
+	Username: <div class="row"><input type="text" name="username" required> <br>
+	</div>
+	E-mail:<div class="row"><input type="text" name="email" required><br></div>
+	Password:<div class="row"> <input type="password" name="pass" required><br>
+	</div>
+	Repeat Password:<div class="row"> <input type="password" name="repeatPwd" required><br>
+	</div>
+	Name:<div class="row"> <input type="text" name="name" required><br>
+	</div>
+	Surname:<div class="row"><input type="text" name="surname" required><br>
+	</div>
+	<input id="sign-up_button" type="button" value="sign-up">
+	<p id="errormessageSign-Up" class="alert"></p>
+	</fieldset>
+	</form>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,23 @@
+
+@charset "UTF-8";
+.row{
+	display:block
+	
+}
+.fieldset{
+	display:inline
+}
+.formSignUp{
+	width:40%;
+	background-color: antiquewhite;
+}
+.formLogin{
+	width:40%;
+	background-color: antiquewhite;
+}
+.alert{
+	color:red;
+}
+body{
+	background-color: lightblue;
+}

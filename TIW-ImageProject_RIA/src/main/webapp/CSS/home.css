@@ -1,0 +1,186 @@
+.hide{
+	width: 8%;
+	margin-right: 5%;
+	margin-top: 4%;
+}
+.albums{
+
+	 display: block ruby;
+}
+
+.albumOwned {
+  
+  width: 50%;
+  text-align: center;
+   border-radius: 10px;
+ 	 padding: 2px;
+ 	 margin-left: 0; 
+margin-right: auto;
+ 	
+
+}
+
+.albumUsers {
+  
+ width: 50%;
+  text-align: center;
+   border-radius: 10px;
+ 	 padding: 2px;
+ 	 margin-left: auto; 
+margin-right: 0;
+
+}
+
+.row{
+	  text-align:"center";
+ 	 padding: 2px;
+}
+
+ td {
+ background-color: antiquewhite;
+  			color: black;
+  border-bottom: 1px solid #ddd;
+  border-right: 1px solid gray;
+  
+}
+  
+table.table{
+	background-color: white;
+	  
+	   border-radius: 10px;
+ 	 padding: 2px;
+}
+.form{
+	margin-top:3%;
+	background-color: antiquewhite;
+	width:63%;
+    box-shadow: 7px 7px 10px #cbced1, -7px -7px 10px gray;
+    border-radius: 10px;
+    padding: 2px;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+table.imageNewAlbum{
+	width:80%;
+}
+
+body{
+	background-color:lightblue;
+}
+
+th{
+	background-color: black;
+	color: white;
+}
+
+th.showAlbum{
+	background-color: white;
+	color: white;
+}
+
+
+th.rowAlbum{
+	background-color: black;
+	color: white;
+	text-align: center;
+
+}
+table.albumInfoShowed{
+	width: 40%;
+	text-align: center;
+	
+	
+}
+
+table,td{
+ table-layout: fixed;
+  border-collapse: collapse;
+
+}
+
+
+table.showImage{
+	width:65%;
+	margin-top: 1%;
+	text-align: center;
+	border-collapse: collapse;
+	
+}
+
+
+
+.alertmessage{
+	font-size: 130%;
+	color: red;
+}
+
+
+img.imageToShow{
+width: 30%;
+	display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+input[type=checkbox],img {
+  display:inline
+ 
+   
+}
+input[type=checkbox]{
+	margin-right:50%;
+	margin-left:50%;
+}
+
+.imageComplete{
+		min-width: 40%;
+	max-width: 60%;;
+	border: 3px solid white;
+}
+
+.showCompleteImageInfoContainer{
+	margin-bottom:2%;
+	border-spacing: 2px;
+    border-collapse: separate;
+}
+
+.imageToShow{
+	width: 150%;
+display: block;
+}
+.divImageToShow{
+	display:inline-block;
+}
+.tdImageToShow{
+	width: min-content;
+}
+.imageCreate{
+	width: 100%;
+display: block;
+}
+.divImageCreate{
+	display:inline-block;
+}
+
+.tdImageCreate{
+width: min-content;
+}
+
+.showComments{
+	text-align:center;
+	margin-top: 4%;
+}
+.WelcomeMessage{
+	margin-right: auto;
+	margin-left: auto;
+	width: 90%;
+	font-size:120%;
+		background-color: antiquewhite;
+	right: 150px;
+		text-align: center;
+		 
+  			color: black;
+	  
+	   border-radius: 10px;
+ 	 padding: 2px;
+}
