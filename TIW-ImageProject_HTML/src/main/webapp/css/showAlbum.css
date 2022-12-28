@@ -1,0 +1,83 @@
+
+
+table.album{
+
+	margin-bottom: 1%;
+	border-collapse: separate;
+  border-spacing: 0 15px;
+}
+
+
+.albumDescription{
+		right: 150px;
+			
+  			color: black; 
+	   border-radius: 10px;
+ 	 padding: 2px;
+}
+
+table,td {
+ table-layout: fixed;
+  border-collapse: collapse;
+
+  
+ 
+}
+
+
+td {
+    padding: 0 15px;
+  }
+
+th{
+	background-color:antiquewhite;
+	color:black;
+	border: 3px solid gray;
+}
+
+img{
+	width: 60%;
+	display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.albumText{
+	
+   font-size:200%;
+  
+}
+
+
+
+td.showImage{
+	border-right: 3px solid gray;
+border-bottom: 3px solid gray;
+}
+
+th.showAlbum{
+	background-color:black;
+	color:white;
+}
+
+table.showImage {
+	background-color: antiquewhite;
+	width:70%;
+    padding: 2px;  
+}
+
+body{
+	background-color:lightblue;
+}
+
+tr{
+	 padding-top: .5em;
+    padding-bottom: .5em;
+}
+.Page{
+	 display: block ruby;
+}
+
+h3{
+	color: black;
+}

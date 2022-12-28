@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Login page</title>
+<style type="text/css"> 
+@charset "UTF-8";
+.row{
+	display:block
+	
+}
+.fieldset{
+	display:inline
+}
+.formSignUp{
+	width:40%;
+	background-color: antiquewhite;
+}
+.formLogin{
+	width:40%;
+	background-color: antiquewhite;
+}
+.alert{
+	color:red;
+}
+body{
+	background-color: lightblue;
+}</style>
+
+<body>
+<div align="center"><h1> Welcome to TIW-ImageProject_HTML, here you can login or sign-Up </h1></div>
+<div class="signIn" align="center" >
+	<h2>This is the login</h2>
+	
+	<form action="CheckLogin" method="POST" class="formLogin">
+	<fieldset>
+		Username:<div class="row"> <input type="text" name="username" required> <br></div>
+		Password:<div class="row"> <input type="password" name="pwd" required><br></div>
+		<input type="submit" value="login">
+		<p th:text=" ${errorMsg}"></p>
+		</fieldset>
+	</form>
+	
+	</div>
+	
+	<div class="signUp" align="center">
+	<h2>This is the form for the signUp</h2>
+	<form class="formSignUp" th:alig="center" action ="CheckSignUp" method="POST">
+	<fieldset>
+	Username: <div class="row"><input type="text" name="username" required> <br></div>
+	Password: <div class="row"><input type="password" name="pwd" required><br></div>
+	Repeat Password: <div class="row"> <input type="password" name="repeatPwd" required><br></div>
+	Name: <div class="row"> <input type="text" name="name" required><br></div>
+	Surname: <div class="row"> <input type="text" name="surname" required><br></div>
+	
+	<input type="submit" value="login">
+	<p th:text="${errorMsgSignUp}"></p>
+	</fieldset>
+	</form>
+</div>
+</body>
+
+
+</html>

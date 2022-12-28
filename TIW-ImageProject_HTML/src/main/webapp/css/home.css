@@ -1,0 +1,111 @@
+.albumOwned {
+  
+  width: 50%;
+  text-align: center;
+   border-radius: 10px;
+ 	 padding: 2px;
+ 	 margin-left: 0; 
+margin-right: auto;
+ 	
+
+}
+
+.albumUsers {
+  
+ width: 50%;
+  text-align: center;
+   border-radius: 10px;
+ 	 padding: 2px;
+ 	 margin-left: auto; 
+margin-right: 0;
+
+}
+
+.form{
+	margin-top:3%;
+	background-color: antiquewhite;
+	width:63%;
+    box-shadow: 7px 7px 10px #cbced1, -7px -7px 10px gray;
+    border-radius: 10px;
+    padding: 2px;
+	margin-right: auto;
+	margin-left: auto;
+}
+.row{
+	  
+	
+	  text-align:"center";
+ 	 padding: 2px;
+}
+
+.WelcomeMessage{
+	margin-right: auto;
+	margin-left: auto;
+	width: 90%;
+	font-size:120%;
+		background-color: antiquewhite;
+	right: 150px;
+		text-align: center;
+		 
+  			color: black;
+	  
+	   border-radius: 10px;
+ 	 padding: 2px;
+}
+
+
+th{
+	background-color: black;
+	color: white;
+}
+
+.albums{
+	 display: block ruby;
+}
+
+ td {
+ background-color: antiquewhite;
+  			color: black;
+  border-bottom: 1px solid #ddd;
+}
+  
+table.table{
+	background-color: white;
+	  
+	   border-radius: 10px;
+ 	 padding: 2px;
+}
+
+body{
+	background-color:lightblue;
+}
+
+img{
+	width: 30%;
+	min-width: 20%;
+	display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.checkbox{
+	display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.image{
+		background-color: antiquewhite;
+	width:80%;
+   	text-align: center;
+    padding: 2px;
+}
+
+td.showImage{
+	border-right: 3px solid gray;
+border-bottom: 3px solid gray;
+}
+
+h3{
+	color: black;
+	text-decoration: underline;
+}

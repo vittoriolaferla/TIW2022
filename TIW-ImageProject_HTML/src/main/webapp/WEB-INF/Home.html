@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Home</title>
+<link rel="stylesheet" type="text/css" media="all"
+	href="../CSS/home.css" th:href="@{/css/home.css}" />
+</head>
+<body>
+<div class= "container">
+
+	<div  class= "logout" align="right">
+		<a th:href="@{/Logout}">Logout</a>
+		
+		
+	</div>
+	<div class="WelcomeMessage" align="center">
+	<h1>Welcome to HomePage, here you can see all the albums present on the database</h1>
+	<p th:text="${'Nice to see you again ' + session.user.name + ' ' + session.user.surname}"></p>
+	</div>
+	
+	<div class="albums">
+	<div align="left" class= "albumOwned" th:if="${albumsId.size() >0}">
+	<h3> Those are the albums owned by you</h3>
+	<div class="row" align="center">
+
+		<table class="table">
+			<thead>
+				<tr>
+					<th>Title</th>
+					<th>Creator</th>
+					<th>Date</th>
+					<th>Link</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr th:each="m : ${albumsId}">
+					<td th:text="${m.title}"></td>
+					<td th:text="${m.nameCreator}"></td>
+					<td th:text="${ m.creationDate }"></td>
+					<td><a th:href="@{/Album(albumId=${m.id})}">ShowAlbum</a></td>
+				</tr>
+			</tbody>
+		</table>
+		
+	</div>  
+	</div>
+	<div align="left"  class= "albumOwned"th:if="${albumsId.size() == 0}"> There is no album owned by you.</div>
+
+
+
+
+<div  align="right" class="albumUsers" th:if="${albums.size() >0}">
+<h3> Those are the albums of the other users</h3>
+<div class="row" align="center">
+		<table class="table">
+			<thead>
+				<tr>
+					<th>Title</th>
+					<th>Creator</th>
+					<th>Date</th>
+					<th>Link</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr th:each="m : ${albums}">
+					<td th:text="${m.title}"></td>
+					<td th:text="${m.nameCreator}"></td>
+					<td th:text="${ m.creationDate }"></td>
+					<td><a th:href="@{/Album(albumId=${m.id})}">ShowAlbum</a></td>
+				</tr>
+			</tbody>
+		</table>
+		</div>
+	</div>  
+	<div align="right" class="albumUsers" th:if="${albums.size() == 0}"> There is no album owned by other users</div>
+	</div>
+	
+	
+	<div align="center" class="form">
+		<h3>Complete the form to create an album</h3>
+		<form action="#" th:action="@{/CreateAlbum}" method="POST">
+			<fieldset>
+				<p>
+					Name Of The Album: <input type="text" name="title" required />
+				</p>
+				<p>
+					<table class="image">
+			<thead>
+				<tr>
+					<th>	Title						</th>
+					<th>	Text Description			</th>
+					<th> Thumbnail</th>
+					<th>AddImage</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr th:each="m : ${images}">
+					<td class="showImage" th:text="${m.title}"></td>
+					<td class="showImage" th:text="${m.TextDescription}"></td>
+					<td class="showImage">  <img th:src="@{${'ImagesServer/'+m.filePath}}"/></td>
+					 <td class="showImage"><div class="checkbox" align="center"><input type="checkbox"  th:name="id" th:value="${m.id}"/></div></td>
+				</tr>
+			</tbody>
+		</table>
+				<input type="submit" value="Create Album">
+				<p th:text=" ${errorMsg}"></p>
+			</fieldset>
+		</form>
+		</div>
+</div>
+</body>
+</html>

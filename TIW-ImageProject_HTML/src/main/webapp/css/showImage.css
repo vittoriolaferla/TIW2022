@@ -1,0 +1,92 @@
+.title,.textDescription,img{
+
+	margin-top: 2%;
+  margin-bottom: 2%;
+
+}
+
+.title,.textDescription{
+	background-color: antiquewhite;
+    	margin-right:20%;
+	margin-left:40%;
+    border-radius: 10px;
+	width: 20%;
+	display:block
+}
+
+
+.textComment{
+	text-align:center;
+	
+}
+
+.nameUser{
+	 margin-left: 20%; 
+margin-right: 20%;
+}
+.title{
+ width: 20%;
+  text-align: center;
+   border-radius: 10px;
+ 	 padding: 2px;
+ 	 margin-left: 22%; 
+margin-right: auto;
+}
+
+
+.textDescription{
+	  width: 20%;
+  text-align: center;
+   border-radius: 10px;
+ 	 padding: 2px;
+ 	 margin-left: auto; 
+margin-right: 22%;
+ 	
+}
+
+img{
+	width: 35%;
+}
+
+.showImageRow{
+	background-color:black;
+	color:white;
+}
+
+.albumDescription{
+display:-webkit-box
+}
+
+.form{
+	width:50%;
+	margin-right:25%;
+	margin-left:25%;
+	margin-top:5%;
+	background-color: antiquewhite;
+	width:50%;
+    box-shadow: 7px 7px 10px #cbced1, -7px -7px 10px gray;
+    border-radius: 10px;
+    padding: 2px;
+    
+}
+
+
+
+table {
+	background-color: antiquewhite;
+	width:50%;
+    box-shadow: 7px 7px 10px #cbced1, -7px -7px 10px gray;
+    border-radius: 10px;
+    padding: 2px;
+    max-width:80%;
+    	table-layout:fixed;
+}
+
+body{
+	background-color:lightblue;
+}
+    
+td{
+	border-right: 3px solid gray;
+border-bottom: 3px solid gray;
+}

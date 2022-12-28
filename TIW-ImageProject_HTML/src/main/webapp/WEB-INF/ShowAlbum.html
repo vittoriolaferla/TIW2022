@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>ShowAlbum</title>
+<link rel="stylesheet" type="text/css" media="all"
+	href="../CSS/showAlbum.css" th:href="@{/css/showAlbum.css}" />
+</head>
+<body>
+	
+	<a th:href="@{/Home}">Back to home</a>
+	<div class="albumDescription" align="center">
+	<table class="album" th:align="center">
+			<thead>
+				<tr class="album" align="center">
+					<th class="rowAlbum" ><h2>Title</h2></th>
+					<th class="rowAlbum"><h2>Creator</h2></th>
+					<th class="rowAlbum"><h2>Date</h2></th>
+				</tr>
+			</thead>
+			<tbody>
+			<tr class="album" align="center" >
+		<td><div class="albumText" th:align="center" th:text=" ${ album.title}"></div></td>
+		<td><div class="albumText"  th:align="center" th:text=" ${album.nameCreator} "></div></td>
+		<td><div class="albumText"  th:align="center" th:text=" ${album.creationDate} "></div></td>
+		</tr>
+			</tbody>
+		</table>
+	</div>
+	
+
+	
+	<div class= "images" align="center">
+	<h3>Those are the images present in the album</h3>
+	<div class="row">
+		<table class="showImage">
+			<thead>
+				<tr>
+					<th  class="showImage">Title</th>
+					<th  class="showImage">Text Description</th>
+					<th  class="showImage">Image</th>
+					<th  class="showImage">Link</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr th:each="m : ${images}">
+					<td class="showImage"> <div  th:align="center" class="title" th:text="${m.title}"></div></td>
+					<td class="showImage"><div  th:align="center" class="textDescription" th:text="${m.TextDescription}"></div></td>
+					<td class="showImage"> <img th:src="@{${'ImagesServer/'+m.filePath}}"/></td>
+				<td class="showImage"><div th:align="center"><a th:align="center" th:href="@{/Image(imageId=${m.id})}">ShowImage</a></div></td>
+				</tr>
+			</tbody>
+		</table>
+	<div class="Page">
+	<div class="buttonPrevious" th:if="${next}">
+    	<a th:href="@{/NextPage(idImage=${images.get(images.size()-1).id},idAlbum=${album.id})}" role="button"><button >Next</button></a>
+    	
+    </div>
+    <div class="buttonNext" th:if="${prev}">
+        	<a th:href="@{/PreviousPage(idImage=${images.get(0).id},idAlbum=${album.id})}" role="button"><button>Previous</button></a>
+    	</div>
+    	</div>	
+    	
+   
+	
+		
+		
+		</div>
+	</div>  
+		
+
+
+</body>
+</html>

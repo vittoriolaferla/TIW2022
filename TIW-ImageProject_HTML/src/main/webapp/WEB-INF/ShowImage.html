@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+
+<title>Image</title>
+<link rel="stylesheet" type="text/css" media="all"
+	href="../CSS/showImage.css" th:href="@{/css/showImage.css}" />
+</head>
+<body>
+	
+	<a th:href="@{/Album(albumId=${album.id})}">Back to the Album</a>
+	
+	<div class="albumDescription">
+	<div class="title">
+	<h3>Title</h3>
+	<p th:text="${image.title}">
+	</div>
+	<div  class="textDescription">
+	<h3>Text Description</h3>
+	<p align="center" th:text="${image.textDescription}">
+	</div>
+	</div>
+	<div class="image" align="center"><img th:src="@{${'ImagesServer/'+image.filePath}}"/></div>
+	
+	
+	
+	
+	<div class= "images" align="center"  th:if="${comments.size() >0}">
+	<h3>Comments</h3>
+	<div class="row">
+		<table class="showImage">
+			<thead>
+				<tr>
+					<th  class="showImageRow">User</th>
+					<th  class="showImageRow">Comment</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr th:each="m : ${comments}">
+					<td class="showComment"> <div  th:align="center" class="nameUser" th:text="${m.nameUser}"></div></td>
+					<td class="showComment"><div  th:align="center" th:text="${m.text}"></div></td>
+				</tr>
+			</tbody>
+		</table>
+		</div>
+		</div>
+		<div class="noComment" align="center" th:if="${comments.size() ==0}">There are no comments for this image</div>	
+		
+
+<div align="center" class="form">
+		<div class="textForm"><h3>Complete the form to add a comment</h3></div>
+		<form action="#" th:action="@{/CreateComment(idImage=${image.id})}" method="POST">
+			<fieldset>
+				
+					Text: <div class="textComment"><textarea rows = "4" cols = "40" th:name = "text">Enter the comment here</textarea></div>
+				
+				<input type="submit" name="Add a comment">
+				<p th:text=" ${errorMsg}"></p>
+			</fieldset>
+		</form>
+		</div>
+		
+</body>
+</html>
